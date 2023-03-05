@@ -1,4 +1,29 @@
 /*
+	===== MATERIAL ICONS =====
+*/
+@font-face {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/material-symbol-rounded.woff2) format("woff2");
+}
+.m-icon {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialised;
+}
+
+/*
 	===== RESET STYLES =====
 */
 *, *::before, *::after {
@@ -88,4 +113,84 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: hsla(0, 0%, 100%, 0.08);
   border-radius: 500px;
+}
+
+/*
+	- REUSED STYLES
+*/
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 16px;
+}
+
+.icon-btn {
+  background-color: hsla(0, 0%, 100%, 0.08);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.has-state {
+  position: relative;
+}
+.has-state:hover {
+  box-shadow: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
+}
+.has-state:hover::before {
+  background-color: hsla(0, 0%, 100%, 0.04);
+}
+.has-state:is(:focus, :focus-visible) {
+  box-shadow: none;
+}
+.has-state:is(:focus, :focus-visible)::before {
+  background-color: hsla(0, 0%, 100%, 0.08);
+  animation: ripple 250ms ease forwards;
+}
+@keyframes ripple {
+  0% {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+}
+.has-state::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+  transition: 100ms ease;
+}
+
+.btn-primary {
+  background-color: #B5A1E5;
+  color: #100E17;
+  height: 48px;
+  line-height: 48px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-inline: 16px;
+  border-radius: 500px;
+}
+.btn-primary .span {
+  font-weight: 600;
+}
+.btn-primary[disabled] {
+  background-color: #3E3D40;
+  color: #7B7980;
+  cursor: not-allowed;
+}
+.btn-primary[disabled]::before {
+  display: none;
 }

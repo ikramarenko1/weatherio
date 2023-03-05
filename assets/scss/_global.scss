@@ -1,6 +1,6 @@
+@import "./default/fonts";
 @import "./default/reset";
 @import "./default/variables";
-@import "./default/fonts";
 
 /*
 	===== MAIN STYLES =====
@@ -30,4 +30,73 @@ body {
 ::-webkit-scrollbar-thumb {
 	background-color: $white-alpha-8;
 	border-radius: $radius-pill;
+}
+
+/*
+	- REUSED STYLES
+*/
+.container { 
+	max-width: 1600px;
+	width: 100%;
+	margin-inline: auto;
+	padding: 16px;
+}
+.icon-btn {
+	background-color: $white-alpha-8;
+	width: 48px;
+	height: 48px;
+	display: grid;
+	place-items: center;
+	border-radius: $radius-circle;
+}
+.has-state { 
+	position: relative;
+	&:hover {
+		box-shadow: $shadow-1;
+		&::before {
+			background-color: $white-alpha-4;
+		}
+	}
+	&:is(:focus, :focus-visible) {
+		box-shadow: none;
+		&::before {
+			background-color: $white-alpha-8;
+			animation: ripple 250ms ease forwards;
+		}
+		@keyframes ripple {
+			0% { clip-path: circle(0% at 50% 50%); }
+			100% { clip-path: circle(100% at 50% 50%); }
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		clip-path: circle(100% at 50% 50%);
+		transition: $transition-short;
+	}
+}
+.btn-primary {
+	background-color: $primary;
+	color: $on-primary;
+	height: 48px;
+	line-height: 48px;
+	max-width: max-content;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding-inline: 16px;
+	border-radius: $radius-pill;
+	.span {
+		font-weight: $weight-semiBold;
+	}
+	&[disabled] {
+		background-color: $outline;
+		color: $on-surface-variant;
+		cursor: not-allowed;
+		&::before {
+			display: none;
+		}
+	}
 }
