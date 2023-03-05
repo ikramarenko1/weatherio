@@ -479,3 +479,84 @@ article.container::before {
   color: #7B7980;
   font-weight: 600;
 }
+
+/*
+	- HIGHLIGHTS
+*/
+.highlights .m-icon {
+  font-size: 3.2rem;
+}
+.highlights-list {
+  display: grid;
+  gap: 20px;
+}
+.highlights-list .title-3 {
+  color: #7B7980;
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
+}
+.highlights .card-sm {
+  background-color: hsla(0, 0%, 0%, 0.1);
+  position: relative;
+}
+
+.highlight-card :is(.wrapper, .card-list, .card-item) {
+  display: flex;
+  align-items: center;
+}
+.highlight-card .wrapper {
+  justify-content: space-between;
+  gap: 16px;
+}
+.highlight-card .card-list {
+  flex-wrap: wrap;
+  flex-grow: 1;
+  row-gap: 8px;
+}
+.highlight-card .card-item {
+  width: 50%;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.highlight-card .label-1 {
+  color: #7B7980;
+}
+.highlight-card.two .card-item {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.highlight-card.two .label-1 {
+  -webkit-margin-after: 4px;
+          margin-block-end: 4px;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 2px 12px;
+  border-radius: 500px;
+  font-weight: 600;
+  cursor: help;
+}
+.badge.aqi-1 {
+  background-color: #89E589;
+  color: #1F331F;
+}
+.badge.aqi-2 {
+  background-color: #E5DD89;
+  color: #33311F;
+}
+.badge.aqi-3 {
+  background-color: #E5C089;
+  color: #332B1F;
+}
+.badge.aqi-4 {
+  background-color: #E58989;
+  color: #331F1F;
+}
+.badge.aqi-5 {
+  background-color: #E589B7;
+  color: #331F29;
+}
