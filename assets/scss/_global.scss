@@ -96,3 +96,53 @@ body {
 		}
 	}
 }
+.card {
+	background-color: $surface;
+	color: $on-surface;
+	&-lg {
+		border-radius: $radius-28;
+		padding: 20px;
+	}
+	&-sm {
+		border-radius: $radius-16;
+		padding: 16px;
+	}
+}
+.heading {
+	color: $white;
+	font-size: $heading;
+	line-height: 1.1;
+}
+.title {
+	&-1 {
+		font-size: $title-1;
+	}
+	&-2 {
+		font-size: $title-2;
+		margin-block-end: 12px;
+	}
+	&-3 {
+		font-size: $title-3;
+		font-weight: $weight-semiBold;
+	}
+}
+.body {
+	&-1 {
+		font-size: $body-1;
+	}
+	&-2 {
+		font-size: $body-2;
+		font-weight: $weight-semiBold;
+	}
+	&-3 {
+		font-size: $body-3;
+	}
+}
+.label {
+	&-1 {
+		font-size: $label-1;
+	}
+	&-2 {
+		font-size: $label-2;
+	}
+}
