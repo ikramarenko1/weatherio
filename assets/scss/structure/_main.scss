@@ -195,3 +195,39 @@ article {
 		color: $on-bg-aqi-5;
 	}
 }
+
+/*
+	- HOURLY FORECAST
+*/
+.slider { 
+	&-container {
+		overflow-x: auto;
+		margin-inline: -16px;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	&-list {
+		display: flex;
+		gap: 12px;
+		&:first-child {
+			margin-block-end: 16px;
+		}
+		&::before,
+		&::after {
+			content: '';
+			min-width: 4px;
+		}
+	}
+	&-item {
+		min-width: 110px;
+		flex: 1 1 100%;
+		.weather-icon {
+			margin-inline: auto;
+			margin-block: 12px;
+		}
+	}
+	&-card { 
+		text-align: center;
+	}
+}
