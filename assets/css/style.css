@@ -646,3 +646,25 @@ article.container::before {
 .fade-in .footer {
   display: flex;
 }
+
+/*
+	- ERROR SECTION
+*/
+.error-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh; /* for mobile devices */
+  background-color: #131214;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+}
+.error-content .btn-primary {
+  -webkit-margin-before: 20px;
+          margin-block-start: 20px;
+}
