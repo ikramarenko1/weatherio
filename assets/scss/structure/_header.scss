@@ -4,8 +4,18 @@
 .header { 
 	.btn-primary { 
 		.span { 
-			display: none; 
-		} 
+			display: none;
+
+			// > $breakpoint-xl width
+			@media (min-width: $breakpoint-xl) {
+				display: block;
+			}
+		}
+
+		// > $breakpoint-xl width
+		@media (min-width: $breakpoint-xl) {
+			padding-inline: 16px 24px;
+		}
 	} 
 	.container {
 		display: flex;
@@ -16,6 +26,11 @@
 		display: flex;
 		align-items: center;
 		gap: 16px;
+
+		// > $breakpoint-xl width
+		@media (min-width: $breakpoint-xl) {
+			gap: 24px;
+		}
 	}
 	.btn-primary {
 		padding-inline: 12px;
@@ -64,6 +79,11 @@
 			inset: 0;
 			box-shadow: none;
 		}
+	}
+
+	// > $breakpoint-xl width
+	@media (min-width: $breakpoint-xl) {
+		clip-path: circle(3% at calc(100% - 273px) 6%);
 	}
 }
 .search-wrapper {

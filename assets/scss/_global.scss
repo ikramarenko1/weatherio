@@ -36,6 +36,11 @@ body {
 	width: 100%;
 	margin-inline: auto;
 	padding: 16px;
+
+	// screens > 768px 
+	@media (min-width: 768px) {
+		padding: 24px;
+	}
 }
 .icon-btn {
 	background-color: $white-alpha-8;
@@ -102,10 +107,22 @@ body {
 	&-lg {
 		border-radius: $radius-28;
 		padding: 20px;
+
+		// > $breakpoint-xl width
+		@media (min-width: $breakpoint-xl) {
+			padding: 24px;
+		}
 	}
 	&-sm {
 		border-radius: $radius-16;
 		padding: 16px;
+
+		// > $breakpoint-xl width
+		@media (min-width: $breakpoint-xl) {
+			padding: 20px;
+			display: grid;
+			grid-template-rows: min-content 1fr;
+		}
 	}
 }
 .heading {
@@ -116,6 +133,11 @@ body {
 .title {
 	&-1 {
 		font-size: $title-1;
+
+		// > $breakpoint-xl width
+		@media (min-width: $breakpoint-xl) {
+			font-size: $title-1-for-breakpoint-xl;
+		}
 	}
 	&-2 {
 		font-size: $title-2;
