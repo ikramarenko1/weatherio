@@ -565,6 +565,11 @@ article.container::before {
 .highlights .m-icon {
   font-size: 3.2rem;
 }
+@media (min-width: 768px) {
+  .highlights .m-icon {
+    font-size: 3.6rem;
+  }
+}
 .highlights-list {
   display: grid;
   gap: 20px;
@@ -604,6 +609,13 @@ article.container::before {
 }
 .highlight-card .label-1 {
   color: #7B7980;
+}
+@media (min-width: 768px) {
+  .highlight-card.one .card-item {
+    width: 25%;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .highlight-card.two .card-item {
   justify-content: flex-start;
@@ -672,6 +684,13 @@ article.container::before {
 .slider-container::-webkit-scrollbar {
   display: none;
 }
+@media (min-width: 768px) {
+  .slider-container {
+    margin-inline: 0 -24px;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+  }
+}
 .slider-list {
   display: flex;
   gap: 12px;
@@ -684,6 +703,16 @@ article.container::before {
   content: "";
   min-width: 4px;
 }
+@media (min-width: 768px) {
+  .slider-list::before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .slider-list::after {
+    min-width: 12px;
+  }
+}
 .slider-item {
   min-width: 110px;
   flex: 1 1 100%;
@@ -694,6 +723,12 @@ article.container::before {
 }
 .slider-card {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hourly-forecast .card-sm {
+    padding: 16px;
+  }
 }
 
 /*
