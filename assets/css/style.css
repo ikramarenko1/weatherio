@@ -292,6 +292,18 @@ body {
   font-size: 1.2rem;
 }
 
+.fade-in {
+  animation: fade-in 250ms ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*
 	- HEADER
 */
@@ -607,7 +619,7 @@ article.container::before {
 }
 @media (min-width: 1200px) {
   article.container {
-    grid-template-columns: 360px minmax(0 1fr);
+    grid-template-columns: 360px minmax(0, 1fr);
     gap: 40px;
   }
 }
@@ -730,6 +742,11 @@ article.container::before {
 @media (min-width: 768px) {
   .highlights-list {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .highlights-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 .highlights .card-sm {
